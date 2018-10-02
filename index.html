@@ -1,12 +1,163 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>BIMD 233 GIT and Web Publishing Guide</title>
-</head>
-<body>
-    <h1>hello world</h1>
-</body>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>GIT & Student Web Publishing Documentation</title>
+    <link href="style.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+  </head>
+  <body>
+    <div id="nav">
+      <ul>
+        <li class="header">Getting Started</li>
+        <li><a class="sec1">Set up GIT</a></li>
+        <li><a class="sec2">Set up Student Web Service</a></li>
+        <li><a class="sec3">Possible situations</a></li>
+        <li class="header">GIT</li>
+        <li><a class="sec4">Creating a repository</a></li>
+        <li><a class="sec5">Cloning a repository</a></li>
+        <li><a class="sec6">Pushing files to repository</a></li>
+        <li><a class="sec7">Pulling files from repository</a></li>
+        <li class="header">Student Web Publishing</li>
+        <li><a class="sec8">Set up a repository on Student Website</a></li>
+        <li><a class="sec9">Update files on Student Website</a></li>
+      </ul>
+    </div>
+    <div id="content">
+      <div>
+        <h1>BIMD233 GIT & Student Web Publishing Guide</h1>
+        <h2>Overview</h2>
+        <p>GIT is a tool that helps you manage your code and files. Think about GIT as a Cloud Drive for your code. It also helps you with code version control, meaning that if you ever run into a situation to go back the previous versions of your code, GIT will allow you to do so.
+          In many tech industries, people use GIT because it allows multiple team members to work on the same projects without interfering each other, also maintaining the major version of the project.
+          If you are interested in learning to use GIT in a team environment, read more about <a href="https://git-scm.com/book/en/v2/Git-Branching-Basic-Branching-and-Merging" target="_blank">branching</a> on GIT.
+        </p>
+        <p>In this class We will be using GIT as a main tool to help us create and manage web files on the student website. You can learn other gateways <a href="https://itconnect.uw.edu/connect/web-publishing/" target="
+          ">here</a></p>
+        <p>Be sure to check out other resources such as <a href="https://try.github.io/levels/1/challenges/1" target="_blank">Try GIT</a>.
+          <br>A printable <a href="GIT_guide.pdf" target="_blank">guide</a> can be found on canvas.
+        </p>
+      </div>
+      <div id="sec1">
+        <h2>Set up GIT</h2>
+        <p>1) Install GIT: <a href="https://git-scm.com/downloads" target="_blank">https://git-scm.com/download</a> on your computer</p>
+        <p>(for Mac users, make sure you allow the installer to run in System Preferences-Security & Privacy)</p>
+        <p>2) Create a BitBucket account: <a href="https://bitbucket.org/" target="_blank">https://bitbucket.org/</a></p>
+        <p>After GIT installation, GIT Bash will also be installed, it comes with <span>SSH(secure shell, protocol for file transfer)</span> which we will be using to do student web publishing.</p>
+        <p>When using GIT Bash, be sure to hit <span>ENTER</span> to execute a command line.</p>
+        <img src="img/gitbash.png">
+      </div>
+      <div id="sec2">
+        <h2>Set up Student Web Service</h2>https://uwnetid.washington.edu/manage/
+        <p>1) Go to <a href="https://uwnetid.washington.edu/manage/" target="_blank">Manage UW NetID Account</a>, <b>OR</b>
+          <br>Login to <a href="https://my.uw.edu/" target="_blank">myUW</a>, look to the left, go to <span>UW Resources</span>&#8594;<span>Manage UW NetID Account</span></p>
+        <p>2) Go to <span>Computing Services</span>, check <span>Student Web Publishing</span>, then click <span>Subscribe</span></p>
+        <p>You should be able to access the index page of your student website through using the link <b>http://students.washington.edu/<span>yourNetID</span></b></p>
+      </div>
+      <div id="sec3">
+        <h2>Possible Situations</h2>
+        <p>&#9655; <a class="sec5">I don't have a local repository set up on my current computer</a></p>
+        <p>&#9655; <a class="sec5">I have set up a repository on a school computer and I want to set up a repository on my laptop</a></p>
+        <p>&#9655; <a class="sec6">I have finished my lab files and I want to add them to my remote repository on Bitbucket</a></p>
+        <p>&#9655; <a class="sec7">I pushed my files on a school computer and I want to update my repository folder with the same files on my laptop</a>
+        <br>Make sure you have cloned your repository on your local machine</p>
+        <p>&#9655; <a class="sec8">I don't have anything on my website</a>
+        <br>Make sure you have subscribed to the Student Web Services</p>
+        <p>&#9655; <a class="sec9">I have new lab files, how do I update them on my website?</a>
+        <br>Make sure you have pushed changes to BitBucket remote repository</p>
+      </div>
+      <div id="sec4">
+        <h2>Creating a Repository</h2>
+        <p>Go to your BitBucket home page, and find the options to create a new repository</p>
+        <img src="img/1-1.png">
+        <img src="img/1-2.png">
+        <img src="img/1-3.png">
+      </div>
+      <div id="sec5">
+        <h2>Cloning a Repository</h2>
+        <p>Cloning an existing repository from your Bitbucket account to your local machine allows you to place files and update to remote repository easily.</p>
+        <p><b>You should only need to clone your repository ONCE per computer</b></p>
+        <p>1) Open <span>GIT Bash</span></p>
+        <p>2) Use <span>cd desktop</span> to locate yourself to your desktop.The command <span>cd</span> stands for "change directory", which allows you to change your current location.
+        <br><img src="img/2-1.png"><br><br>
+        notice the yellow text <img src="img/2-2.png"> indicates your current location.
+        </p>
+        <p>3) Copy the GIT link of your repository (<b>NOT website link</b>). You can find the repository link in your repository page: </p>
+        <img src="img/2-3-1.png">
+        <img src="img/2-3-2.png">
+        <p><b>NOTE: I recommend you to copy a HTTPS link if you have not set up a SSH key.</b></p>
+        <p>HTTPS link format: <b>https://<span>yourUsername</span>@bitbucket.org/<span>yourUsername</span>/bimd233</b></p>
+        <p>^^^replace the highlighted items accordingly, if you did not name your repository "bimd233", replace "bimd233" with your repository name</p>
+        <p>4) Use <span>git clone</span> with the your repository link to create a local repository on your computer. </p>
+        <img src="img/2-4.png">
+        <p><b>NOTE: It might prompt you for BitBucket password, if so enter your BitBucket password(you won't be able to see it on screen).</b></p>
+        <p>There should be a folder named "bimd233" created on your desktop, make sure all your BIMD233 lab files go in this folder.</p>
+        <img src="img/2-5.png">
+      </div>
+      <div id="sec6">
+        <h2>Pushing Files to Remote Repository</h2>
+        <p>After you finished or made changes to your lab files, you would want to push the files to your remote repository which will update your cloud files with the latest versions.</p>
+        <p>1) Open <span>GIT Bash</span>. Depend on where your repository is cloned, navigate to your local repository.<br>In this case, we are usng <span>cd desktop/bimd233</span></p>
+        <p>You should be able to see something similar to this
+        <img src="img/3-1.png">, the blue text <img src="img/3-2.png"> indicates that the folder is a GIT repository.</p>
+        <p>2) This is <b>not required</b>, but you can use <span>git status</span> to check the current status of your repository.</p>
+        <img src="img/3-3.png">
+        <p>^^^<span>git status</span> is telling me that GIT has tracked that I have new files in the folder, but not added to prepare a push to my remote repository.</p>
+        <p>3) Use the followiing commands in the listed order to prepare a push to the remote repository:
+          <br><span>git add -A</span> or <span>git add fileName</span>(for a specific file): stages all files to prepare a commit
+          <br><span>git commit -m"commit message"</span>: Commit files to prepare for push, make your commit message meaningful so you can trace back to older version files easily
+          <br><span>git push</span>: push the changes to local repository to your remote repository, this will add the new files or changes to files up to your remote repository.
+          <br><b>NOTE: It might prompt you for BitBucket password, if so enter your BitBucket password(you won't be able to see it on screen).</b></p>
+        </p>
+        <img src="img/3-4.png">
+      </div>
+      <div id="sec7">
+        <h2>Pulling Files From Remote Repository</h2>
+        <p>Pulling changes from remote repository will make sure your local repository is up to date with the latest version of the files.</p>
+        <p>1) Open <span>GIT Bash</span>. Depend on where your repository is cloned, navigate to your local repository.<br>In this case, we are still usng <span>cd desktop/bimd233</span></p>
+        <p>2) Use <span>git pull</span>. After the pulling process is finished, your files in your local repository folder should be updated and synced with the versions on your remote repository on BitBucket.
+        <br><b>NOTE: It might prompt you for BitBucket password, if so enter your BitBucket password(you won't be able to see it on screen).</b></p>
+      </div>
+      <div id="sec8">
+        <h2>Setting up a Repository on Your Student Website</h2>
+        <p>In order to create a new directory on your student website, we will need to <span>clone a GIT repository</span>. <b>You only need to clone the repository ONCE on your website</b>.</p>
+        <p>1) Have your GIT repository link ready (go back to <a class="sec5">Cloning a repository</a> to learn how again)</p>
+        <p>2) In <span>GIT Bash</span>, use <span>ssh netID@vergil.u.washington.edu</span> to login to your student web
+        <br>^^^replace "netID" with your net ID.
+        <br><img src="img/4-1.png">
+        <br>Type your UW netID password after you have executed the ssh command line.
+        <br>It might prompt you for some security questions, just type <span>yes</span> to proceed.
+        </p>
+        <p>3) After you login, you should be able to see the followiing</p>
+        <img src="img/4-2.png">
+        <p>4) This is <b>not required</b>, but you can use command <span>ls</span> to check the files in the current location.
+          <br>notice that there is always <span>public_html</span>, all your web files need to go inside of the <span>public_html</span> directory.
+        </p>
+        <img src="img/4-3.png">
+        <p>5) Use <span>cd public_html</span> to locate yourself to the public_html directory (if you are a staff on campus, use <span>cd student_html</span>).
+        </p>
+        <p>6) Use <span>git clone</span> with your repository link to clone a repository on your student website.
+        <br><b>NOTE: It might prompt you for BitBucket password, if so enter your BitBucket password(you won't be able to see it on screen).</b></p>
+        <img src="img/4-4.png">
+        <p>After the cloning process is done, you should be able to check your bimd233 files with the link <b>https://students.washington.edu/<span>yourNetID</span>/bimd233</b>
+        <br>^^^replace <span>yourNetID</span> with your netID, if you did not name your repository "bimd233", replace "bimd233" with your repository name</p>
+      </div>
+      <div id="sec9">
+        <h2>Updating files on Student Website</h2>
+        <p>To update your files on your website is the same process as pulling files from remote repository to local repository.</p>
+        <p>1) Make sure you have pushed your latest version of files to BitBucket</p>
+        <p>2) In <span>GIT Bash</span>, login to your student website. Recap how to do it <a class="sec8">here</a></p>
+        <p>3) Navigate to your GIT repository on the student web (using <span>cd public_html/bimd233</span>). Recap how to do it <a class="sec8">here</a></p>
+        <p>4) Use <span>git pull</span> to update the your website with the latest files on your Remote repository</p>
+
+      </div>
+    </div>
+  </body>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script>
+    $('a').click(function() {
+       var sec = "#"+this.className;
+       $('html, body').animate({ scrollTop: ($(sec).offset().top-50)
+     }, 575); });
+  </script>
 </html>

@@ -1,0 +1,149 @@
+body {
+  margin: 0;
+  font-family: 'Open Sans', sans-serif;
+  letter-spacing: 0.025rem;
+  font-weight: 300;
+}
+
+a {
+  text-decoration: none;
+  transition: all 0.175s;
+  cursor: pointer;
+}
+
+p {
+  font-size: 1.05rem;
+  line-height: 1.75rem;
+}
+
+p a, p a:visited {
+  color: #766FE8;
+  font-weight: bold;
+  box-decoration-break: clone;
+  position: relative;
+  border-bottom: 1px solid #766FE8
+}
+
+p a:hover:after, p a:visited:hover:after{
+  background: #7A94FF;
+  border-color: #7A94FF;
+}
+
+p a:hover {
+  border-color: #7A94FF;
+  color: #7A94FF;
+}
+
+span {
+  color: #7A94FF;
+  font-weight: bold;
+}
+
+img {
+  max-width: 100%;
+  margin: 0.25%;
+  -webkit-box-shadow: 0px 0px 10px 0px rgba(56, 29, 56, 0.1);
+  -moz-box-shadow: 0px 0px 10px 0px rgba(56, 29, 56, 0.1);
+  box-shadow: 0px 0px 10px 0px rgba(56, 29, 56, 0.1);
+}
+p img{
+  margin: 0%;
+  vertical-align: middle;
+}
+h1 {
+  color: #766FE8;
+  font-size: 2.5rem;
+  letter-spacing: 0.15rem;
+  font-weight: 300;
+  margin: 0%;
+}
+
+h2 {
+  color: #766FE8;
+  font-size: 1.75rem;
+  letter-spacing: 0.05rem;
+  font-weight: 300;
+}
+
+#nav, #content {
+  display: inline-block;
+}
+
+#nav {
+  overflow-y: auto;
+  z-index: 5;
+  height: 100vh;
+  position: fixed;
+  top: 5%;
+  left: 2.5%;
+  width: 20%;
+  height: 90%;
+}
+
+#nav ul {
+  padding: 0%;
+  margin: 0%;
+  list-style: none;
+}
+
+#nav li {
+  background-color: #f9f9f9;
+  padding: 6.5% 5% 6.5% 5%;
+}
+
+#nav li a, #nav li a:visited {
+  color: black;
+  font-weight: 300;
+}
+
+#nav li a:hover {
+  color: #766FE8;
+}
+
+#nav li.header {
+  background-color: #766FE8;
+  background-image: -webkit-linear-gradient(left, #766FE8, #7A94FF);
+  background-image: -moz-linear-gradient(left, #766FE8, #7A94FF);
+  background-image: -o-linear-gradient(left, #766FE8, #7A94FF);
+  background-image: linear-gradient(to right, #766FE8, #7A94FF);
+  color: white!important;
+  font-size: 1.15rem;
+}
+
+#nav li.header a:visited {
+  color: white;
+}
+#nav li.credits{
+  background: none;
+}
+#content {
+  top: 5%;
+  left: 27.5%;
+  position: absolute;
+  width: 60%;
+}
+
+#content div {
+  padding-bottom: 2.5%;
+  border-bottom: 1px solid #d1d1d1;
+  margin-bottom: 5%;
+}
+
+@media (min-width: 1024px) and (max-width: 1550px) {
+  h1 {
+    font-size: 1.75rem;
+  }
+  h2 {
+    font-size: 1.35rem;
+  }
+  p {
+    font-size: 0.9rem;
+  }
+  #nav li {
+    padding: 7.5%;
+    font-size: 0.95rem;
+  }
+  #nav li.header {
+    font-size: 1rem;
+  }
+}
