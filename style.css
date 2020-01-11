@@ -1,7 +1,7 @@
 body {
   margin: 0;
   font-family: 'Open Sans', sans-serif;
-  letter-spacing: 0.025rem;
+  letter-spacing: 0.01rem;
   font-weight: 300;
 }
 
@@ -11,31 +11,35 @@ a {
   cursor: pointer;
 }
 
+.mac{
+  color: #4967df;
+}
+
 p {
   font-size: 1.05rem;
   line-height: 1.75rem;
 }
 
 p a, p a:visited {
-  color: #766FE8;
+  color: #8058df;
   font-weight: bold;
   box-decoration-break: clone;
   position: relative;
-  border-bottom: 1px solid #766FE8
+  border-bottom: 1px solid #8058df
 }
 
 p a:hover:after, p a:visited:hover:after{
-  background: #7A94FF;
-  border-color: #7A94FF;
+  background: #4967df;
+  border-color: #4967df;
 }
 
 p a:hover {
-  border-color: #7A94FF;
-  color: #7A94FF;
+  border-color: #4967df;
+  color: #4967df;
 }
 
 span {
-  color: #7A94FF;
+  color: #4967df;
   font-weight: bold;
 }
 
@@ -51,15 +55,15 @@ p img{
   vertical-align: middle;
 }
 h1 {
-  color: #766FE8;
+  color: #8058df;
   font-size: 2.5rem;
-  letter-spacing: 0.15rem;
+  letter-spacing: 0.05rem;
   font-weight: 300;
   margin: 0%;
 }
 
 h2 {
-  color: #766FE8;
+  color: #8058df;
   font-size: 1.75rem;
   letter-spacing: 0.05rem;
   font-weight: 300;
@@ -69,15 +73,23 @@ h2 {
   display: inline-block;
 }
 
+#nav #title{
+  padding: 7.5%;
+}
+
+#nav #title h1{
+  font-size: 1.4rem;
+}
+
 #nav {
-  overflow-y: auto;
   z-index: 5;
   height: 100vh;
   position: fixed;
-  top: 5%;
-  left: 2.5%;
-  width: 20%;
-  height: 90%;
+  top: 0%;
+  left: 0%;
+  width: 24%;
+  height: 100%;
+  overflow-y: auto;
 }
 
 #nav ul {
@@ -87,26 +99,27 @@ h2 {
 }
 
 #nav li {
-  background-color: #f9f9f9;
   padding: 6.5% 5% 6.5% 5%;
 }
 
-#nav li a, #nav li a:visited {
-  color: black;
-  font-weight: 300;
+#nav a li:hover{
+  color: #8058df;
 }
 
-#nav li a:hover {
-  color: #766FE8;
+#nav a li{
+  transition: all 0.2s;
+}
+
+#nav a, #nav a:visited {
+  color: black;
+  font-weight: 300;
+  position: relative;
 }
 
 #nav li.header {
-  background-color: #766FE8;
-  background-image: -webkit-linear-gradient(left, #766FE8, #7A94FF);
-  background-image: -moz-linear-gradient(left, #766FE8, #7A94FF);
-  background-image: -o-linear-gradient(left, #766FE8, #7A94FF);
-  background-image: linear-gradient(to right, #766FE8, #7A94FF);
-  color: white!important;
+  background-color: rgba(73, 103, 223, 0.1);
+  color: #8058df!important;
+  font-weight: 600;
   font-size: 1.15rem;
 }
 
@@ -120,7 +133,7 @@ h2 {
   top: 5%;
   left: 27.5%;
   position: absolute;
-  width: 60%;
+  width: 64%;
 }
 
 #content div {
@@ -146,4 +159,45 @@ h2 {
   #nav li.header {
     font-size: 1rem;
   }
+}
+
+.table{
+  width: 100%;
+  border: 1px solid rgba(0,0,0, 0.2)!important;
+  padding: 0%!important;
+  margin: 0%!important;
+}
+.table .row{
+  display: flex;
+  flex-direction: row;
+  margin: 0% !important;
+  padding: 0% !important;
+}
+
+.table .row:last-child{
+  border-bottom: none!important;
+}
+
+.table .row div{
+  font-size: 1rem;
+  padding: 2.5%;
+  margin-bottom: 0% !important;
+  border-bottom: none!important;
+}
+
+.table .row div:first-child{
+  flex: 1
+}
+.table .row div:nth-child(2){
+  flex: 1.5;
+  color: rgba(0,0,0, 0.6);
+  border-left: 1px solid rgba(0,0,0, 0.2);
+}
+.table .row div:last-child{
+  flex: 1.5;
+  border-left: 1px solid rgba(0,0,0, 0.2);
+}
+
+#commands .row div:first-child, #commands .row div:last-child{
+  font-family: 'Courier New', Courier, monospace;
 }
