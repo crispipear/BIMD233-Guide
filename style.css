@@ -3,16 +3,13 @@ body {
   font-family: 'Open Sans', sans-serif;
   letter-spacing: 0.01rem;
   font-weight: 300;
+  color: #1d1d20;
 }
 
 a {
   text-decoration: none;
   transition: all 0.175s;
   cursor: pointer;
-}
-
-.mac{
-  color: #4967df;
 }
 
 p {
@@ -42,7 +39,6 @@ span {
   color: #4967df;
   font-weight: bold;
 }
-
 img {
   max-width: 100%;
   margin: 0.25%;
@@ -200,4 +196,33 @@ h2 {
 
 #commands .row div:first-child, #commands .row div:last-child{
   font-family: 'Courier New', Courier, monospace;
+}
+
+.note{
+  border-bottom: none!important;
+  box-sizing: border-box;
+  padding: 2%;
+  background-color: rgba(73, 103, 223, 0.1);
+  border-radius: 4px;
+  margin-bottom: 1%!important;
+}
+
+.note div{
+  border-bottom: none!important;
+  margin: 0%!important;
+  padding-bottom: 1%!important;
+}
+.note div h2{
+  margin: 0%;
+  font-size: 1rem;
+  color: #4967df;
+}
+.note p{
+  color: #1d1d20;
+  font-weight: 400;
+  font-size: 0.9rem;
+  margin: 0%;
+}
+.note p b{
+  color: #4967df;
 }

@@ -60,19 +60,28 @@
       <div id="1-3">
         <h2>Set up GIT</h2>
         <p>1) Install GIT: <a href="https://git-scm.com/downloads" target="_blank">https://git-scm.com/download</a> on your computer</p>
-        <p>(<span class="mac">Mac</span>: make sure you allow the installer to run in System Preferences-Security & Privacy)</p>
+        <div class="note" mac="true">
+          <p>Make sure you allow the installer to run in <b>System Preferences-Security & Privacy</b></p>
+        </div>
         <p>2) Create a BitBucket account: <a href="https://bitbucket.org/" target="_blank">https://bitbucket.org/</a></p>
         <p>After GIT installation, GIT Bash will also be installed, it comes with <span>SSH(secure shell, protocol for file transfer)</span> which we will be using to do student web publishing.</p>
         <p>When using GIT Bash, be sure to hit <span>ENTER</span> to execute a command line.</p>
-        <p>(<span class="mac">Mac</span>: can use Terminal instead of GIT Bash)</p>
+        <div class="note" mac="true">
+          <p>You can use Terminal instead of GIT Bash</p>
+        </div>
+        <p>Example usage</p>
         <img src="img/gitbash.png">
       </div>
       <div id="1-4">
         <h2>Set up Student Web Service</h2>https://uwnetid.washington.edu/manage/
         <p>1) Go to <a href="https://uwnetid.washington.edu/manage/" target="_blank">Manage UW NetID Account</a>
-          <br/>(<b>OR</b> Login to <a href="https://my.uw.edu/" target="_blank">myUW</a>, look to the left, go to <span>UW Resources</span>&#8594;<span>Manage UW NetID Account</span>)</p>
+          <div class="note">
+            <p>
+              You can also login to <a href="https://my.uw.edu/" target="_blank">myUW</a>, look to the left, go to <b>UW Resources</b>&#8594;<b>Manage UW NetID Account</b>
+            </p>
+          </div>
         <p>2) Go to <span>Computing Services</span>, check <span>Student Web Publishing</span>, then click <span>Subscribe</span></p>
-        <p>You should be able to access the index page of your student website through using the link <b>http://students.washington.edu/<span>yourNetID</span></b></p>
+        <p>You should be able to access the index page of your student website through using the link <b>https://students.washington.edu/<span>yourNetID</span></b></p>
       </div>
       <div id="1-5">
         <h2>Possible Solutions</h2>
@@ -104,7 +113,9 @@
       <div id="2-2">
         <h2>Clone Repository</h2>
         <p>Cloning an existing repository from your Bitbucket account to your local machine allows you to place files and update to remote repository easily.</p>
-        <p><b>You only need to clone your repository <span>ONCE per computer</span></b></p>
+        <div class="note">
+          <p>You only need to clone your repository <span>ONCE per computer</span>(or server). Do not use clone again if you already have cloned your repository on your current computer.</p>
+        </div>
         <p>1) Open <span>GIT Bash</span> or <span>terminal (Mac users)</span></p>
         <p>2) Use <span>cd desktop</span> to locate yourself to your desktop.The command <span>cd</span> stands for "change directory", which allows you to change your current location.
         <br><img src="img/2-1.png"><br><br>
@@ -113,12 +124,16 @@
         <p>3) Copy the GIT link of your repository (<b>NOT website link</b>). You can find the repository link in your repository page: </p>
         <img src="img/2-3-1.png">
         <img src="img/2-3-2.png">
-        <p><b>NOTE: I recommend you to copy a HTTPS link if you have not set up a SSH key.</b></p>
         <p>HTTPS link format: <b>https://<span>yourUsername</span>@bitbucket.org/<span>yourUsername</span>/<span>repositoryName</span>></p>
+        <div class="note">
+          <p>If you have not set up a SSH key for your computer, use the HTTPS link.</p>
+        </div>
         <p>4) Use <span>git clone</span> with your repository link to create a local repository on your computer. </p>
         <img src="img/2-4.png">
-        <p><b>NOTE: It might prompt you for BitBucket password, if so enter your BitBucket password(you won't be able to see it on screen).</b></p>
-        <p>There should be a folder named "bimd233" created on your desktop, make sure all your BIMD233 lab files go in this folder.</p>
+        <div class="note">
+          <p>If you are using HTTPS link (and have not set up SSH key), it might prompt you for BitBucket password, if so enter your BitBucket password. You won't be able to see your password as you type for privacy purposes. Just press enter after you are finished.</p>
+        </div>
+        <p>5) There should be a folder named "bimd233" created on your desktop, make sure all your BIMD233 lab files go in this folder.</p>
         <img src="img/2-5.png">
       </div>
       <div id="2-3">
@@ -134,7 +149,9 @@
           <br><span>git add .</span> or <span>git add -A</span> or <span>git add fileName</span>(for a specific file): stages all files to prepare a commit
           <br><span>git commit -m "commit message"</span>: Commit files to prepare for push, make your commit message meaningful so you can trace back to older version files easily
           <br><span>git push</span>: push the changes to local repository to your remote repository, this will add the new files or changes to files up to your remote repository.
-          <br><b>NOTE: It might prompt you for BitBucket password, if so enter your BitBucket password(you won't be able to see it on screen).</b></p>
+          <div class="note">
+            <p>If you have not set up SSH key, it might prompt you for BitBucket password, if so enter your BitBucket password. You won't be able to see your password as you type for privacy purposes. Just press enter after you are finished.</p>
+          </div>
         </p>
         <img src="img/3-4.png">
       </div>
@@ -143,7 +160,9 @@
         <p>Pulling changes from remote repository will make sure your local repository is up to date with the latest version of the files.</p>
         <p>1) Open <span>GIT Bash</span> or <span>terminal (Mac users)</span>. Depend on where your repository is cloned, navigate to your local repository.<br>In this case, we are still usng <span>cd desktop/bimd233</span></p>
         <p>2) Use <span>git pull</span>. After the pulling process is finished, your files in your local repository folder should be updated and synced with the versions on your remote repository on BitBucket.
-        <br><b>NOTE: It might prompt you for BitBucket password, if so enter your BitBucket password(you won't be able to see it on screen).</b></p>
+          <div class="note">
+            <p>If you have not set up SSH key, it might prompt you for BitBucket password, if so enter your BitBucket password. You won't be able to see your password as you type for privacy purposes. Just press enter after you are finished.</p>
+          </div>
       </div>
       <div id="3-1">
         <h2>Log into your student website</h2>
@@ -167,7 +186,9 @@
         <p>2) Log in to your student web server. (<a class="3-1">Recap</a>)</p>
         <p>3) Use <span>cd public_html</span> (if you are a staff on campus, use <span>cd student_html</span>)</p>
         <p>4) Use <span>git clone</span> with your repository link to clone a repository on your student website.
-          <br><b>NOTE: It might prompt you for BitBucket password, if so enter your BitBucket password(you won't be able to see it on screen).</b></p>
+          <div class="note">
+            <p>If you have not set up SSH key, it might prompt you for BitBucket password, if so enter your BitBucket password. You won't be able to see your password as you type for privacy purposes. Just press enter after you are finished.</p>
+          </div>
           <img src="img/4-4.png">
           <p>After the cloning process is done, you should be able to check your files with the link <b>https://students.washington.edu/<span>yourNetID</span>/<span>repositoryName</span></b>
       </div>
@@ -198,12 +219,24 @@
     $( document ).ready(function() {
         initNav();
         initTerms();
+        processNotes();
         $('a').click(function() {
         var sec = "#"+this.className;
         $('html, body').animate({ scrollTop: $(sec).offset().top-30}, 575); });
         console.log( "( ͡👁️ ͜ʖ ͡👁️) Oh hi there." );
-        console.log( "( ͡👁️ ͜ʖ ͡👁️) 👉 You can learn more about me at https://lisuying.com" );
     });
+
+    function processNotes(){
+      $( ".note" ).each(function() {
+        if($(this).attr('mac')){
+          $(this).prepend("<div><h2>! Note for Mac Users</h2></div>");
+        }else{
+        $(this).prepend("<div><h2>! Note</h2></div>");
+        }
+      });
+    }
+
+
     function initTerms(){
       const terms = {
         repository: {
