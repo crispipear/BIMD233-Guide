@@ -226,3 +226,10 @@ h2 {
 .note p b{
   color: #4967df;
 }
+
+code{
+  background-color:#e8e8e8;
+  font-size: 120%;
+  color:black;
+  padding:3px;
+}

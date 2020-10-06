@@ -77,8 +77,9 @@
         <p>1) Go to <a href="https://uwnetid.washington.edu/manage/" target="_blank">Manage UW NetID Account</a>
           <div class="note">
             <p>
-              You can also login to <a href="https://my.uw.edu/" target="_blank">myUW</a>, look to the left, go to <b>UW Resources</b>&#8594;<b>Manage UW NetID Account</b>
+              You can also login to <a href="https://my.uw.edu/" target="_blank">myUW</a>, look to the left, go to <b>UW Resources</b>&#8594;<b>Manage UW NetID Account</b> 
             </p>
+            <p>(Scroll down a little bit to find it or use ctrl+f to look for "Manage UW NetID Account")</p>
           </div>
         <p>2) Go to <span>Computing Services</span>, check <span>Student Web Publishing</span>, then click <span>Subscribe</span></p>
         <p>You should be able to access the index page of your student website through using the link <b>https://students.washington.edu/<span>yourNetID</span></b></p>
@@ -117,18 +118,18 @@
           <p>You only need to clone your repository <span>ONCE per computer</span>(or server). Do not use clone again if you already have cloned your repository on your current computer.</p>
         </div>
         <p>1) Open <span>GIT Bash</span> or <span>terminal (Mac users)</span></p>
-        <p>2) Use <span>cd desktop</span> to locate yourself to your desktop.The command <span>cd</span> stands for "change directory", which allows you to change your current location.
+        <p>2) Use <code>cd desktop</code> to locate yourself to your desktop.The command <code>cd</code> stands for "change directory", which allows you to change your current location.
         <br><img src="img/2-1.png"><br><br>
         notice the yellow text <img src="img/2-2.png"> indicates your current location.
         </p>
         <p>3) Copy the GIT link of your repository (<b>NOT website link</b>). You can find the repository link in your repository page: </p>
         <img src="img/2-3-1.png">
         <img src="img/2-3-2.png">
-        <p>HTTPS link format: <b>https://<span>yourUsername</span>@bitbucket.org/<span>yourUsername</span>/<span>repositoryName</span>></p>
+        <p>HTTPS link format: https://<span>yourUsername</span>@bitbucket.org/<span>yourUsername</span>/<span>repositoryName</span>></p>
         <div class="note">
           <p>If you have not set up a SSH key for your computer, use the HTTPS link.</p>
         </div>
-        <p>4) Use <span>git clone</span> with your repository link to create a local repository on your computer. </p>
+        <p>4) Use <code>git clone</code> and paste in your repository link to create a local repository on your computer. </p>
         <img src="img/2-4.png">
         <div class="note">
           <p>If you are using HTTPS link (and have not set up SSH key), it might prompt you for BitBucket password, if so enter your BitBucket password. You won't be able to see your password as you type for privacy purposes. Just press enter after you are finished.</p>
@@ -139,16 +140,16 @@
       <div id="2-3">
         <h2>Push Files to Remote Repository</h2>
         <p>After you finished or made changes to your lab files, you would want to push the files to your remote repository which will update your cloud files with the latest versions.</p>
-        <p>1) Open <span>GIT Bash</span> or <span>terminal (Mac users)</span>. Depend on where your repository is cloned, navigate to your local repository.<br>In this case, we are usng <span>cd desktop/bimd233</span></p>
+        <p>1) Open <span>GIT Bash</span> or <span>terminal (Mac users)</span>. Depend on where your repository is cloned, navigate to your local repository.<br>In this case, we are using <code>cd desktop/bimd233</code></p>
         <p>You should be able to see something similar to this
         <img src="img/3-1.png">, the blue text <img src="img/3-2.png"> indicates that the folder is a GIT repository.</p>
-        <p>2) This is <b>not required</b>, but you can use <span>git status</span> to check the current status of your repository.</p>
+        <p>2) This is <span>not required</span>, but you can use <code>git status</code> to check the current status of your repository.</p>
         <img src="img/3-3.png">
-        <p>^^^<span>git status</span> is telling me that GIT has tracked that I have new files in the folder, but not added to prepare a push to my remote repository.</p>
-        <p>3) Use the followiing commands in the listed order to prepare a push to the remote repository:
-          <br><span>git add .</span> or <span>git add -A</span> or <span>git add fileName</span>(for a specific file): stages all files to prepare a commit
-          <br><span>git commit -m "commit message"</span>: Commit files to prepare for push, make your commit message meaningful so you can trace back to older version files easily
-          <br><span>git push</span>: push the changes to local repository to your remote repository, this will add the new files or changes to files up to your remote repository.
+        <p>^^^<code>git status</code> is telling me that GIT has tracked that I have new files in the folder, but not added to prepare a push to my remote repository.</p>
+        <p>3) Use the following commands in the listed order to prepare a push to the remote repository:
+          <br><code>git add .</code> or <code>git add -A</code> or <code>git add fileName</code>(for a specific file): stages all files to prepare a commit
+          <br><code>git commit -m "commit message"</code>: Commit files to prepare for push, make your commit message meaningful so you can trace back to older version files easily
+          <br><code>git push</code>: push the changes to local repository to your remote repository, this will add the new files or changes to files up to your remote repository.
           <div class="note">
             <p>If you have not set up SSH key, it might prompt you for BitBucket password, if so enter your BitBucket password. You won't be able to see your password as you type for privacy purposes. Just press enter after you are finished.</p>
           </div>
@@ -158,8 +159,8 @@
       <div id="2-4">
         <h2>Pull Files From Remote Repository</h2>
         <p>Pulling changes from remote repository will make sure your local repository is up to date with the latest version of the files.</p>
-        <p>1) Open <span>GIT Bash</span> or <span>terminal (Mac users)</span>. Depend on where your repository is cloned, navigate to your local repository.<br>In this case, we are still usng <span>cd desktop/bimd233</span></p>
-        <p>2) Use <span>git pull</span>. After the pulling process is finished, your files in your local repository folder should be updated and synced with the versions on your remote repository on BitBucket.
+        <p>1) Open <span>GIT Bash</span> or <span>terminal (Mac users)</span>. Depend on where your repository is cloned, navigate to your local repository.<br>In this case, we are still usng <code>cd desktop/bimd233</code></p>
+        <p>2) Use <code>git pull</code>. After the pulling process is finished, your files in your local repository folder should be updated and synced with the versions on your remote repository on BitBucket.
           <div class="note">
             <p>If you have not set up SSH key, it might prompt you for BitBucket password, if so enter your BitBucket password. You won't be able to see your password as you type for privacy purposes. Just press enter after you are finished.</p>
           </div>
@@ -167,14 +168,14 @@
       <div id="3-1">
         <h2>Log into your student website</h2>
         <p>1) In <span>GIT Bash</span> or <span>terminal (Mac users)</span>
-          <br/>use <span>ssh yourNetID@vergil.u.washington.edu</span> to login to your student web server.
+          <br/>use <code>ssh yourNetID@vergil.u.washington.edu</code> to login to your student web server.
         <br><img src="img/4-1.png">
         <br>Type your <span>UW netID password</span> after you have executed the ssh command line.
         <br>It might prompt you for some security questions, just type <span>yes</span> to proceed.
         </p>
-        <p>2) After you login, you should be able to see the followiing</p>
+        <p>2) After you login, you should be able to see the following</p>
         <img src="img/4-2.png">
-        <p>3) This is <b>not required</b>, but you can use command <span>ls</span> to check the files in the current directory you are in.
+        <p>3) This is <b>not required</b>, but you can use command <code>ls</code> to check the files in the current directory you are in.
           <br>notice that there is always a directory named <span>public_html</span>, all your web files need to go inside of the <span>public_html</span> directory.
         </p>
         <img src="img/4-3.png">
@@ -184,8 +185,8 @@
         <p>In order to create a new directory on your student website, we will need to <span>clone a GIT repository</span>. <b>You only need to clone the repository ONCE on your website</b>.</p>
         <p>1) Have your GIT repository link ready (<a class="2-2">Recap</a>)</p>
         <p>2) Log in to your student web server. (<a class="3-1">Recap</a>)</p>
-        <p>3) Use <span>cd public_html</span> (if you are a staff on campus, use <span>cd student_html</span>)</p>
-        <p>4) Use <span>git clone</span> with your repository link to clone a repository on your student website.
+        <p>3) Use <code>cd public_html</code> (if you are a staff on campus, use <code>cd student_html</code>)</p>
+        <p>4) Use <code>git clone</code> with your repository link to clone a repository on your student website.
           <div class="note">
             <p>If you have not set up SSH key, it might prompt you for BitBucket password, if so enter your BitBucket password. You won't be able to see your password as you type for privacy purposes. Just press enter after you are finished.</p>
           </div>
@@ -197,8 +198,8 @@
         <p>To update your files on your website is the same process as pulling files from remote repository to local repository.</p>
         <p>1) Make sure you have pushed your latest version of files to your remote repository.</p>
         <p>2) In <span>GIT Bash</span> or <span>terminal (Mac users)</span>, login to your student website. (<a class="2-2">Recap</a>)</p>
-        <p>3) Move to your GIT repository on the student web server (using <span>cd public_html/repositoryName</span>)</p>
-        <p>4) Use <span>git pull</span> to update the files on your repository. Your website files should be up to date.</p>
+        <p>3) Move to your GIT repository on the student web server (using <code>cd public_html/repositoryName</code>)</p>
+        <p>4) Use <code>git pull</code> to update the files on your repository. Your website files should be up to date.</p>
       </div>
       <div id="4-2">
         <h2>About</h2>
@@ -211,6 +212,8 @@
           <a href="mailto: lisuy97@gmail.com">contact me</a> for 
           design/web development advice or portfolio critiques.
         </p>
+
+        <p>Recently updated by Min Li :-)</p>
       </div>
     </div>
   </body>
